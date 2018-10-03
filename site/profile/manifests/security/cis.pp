@@ -7,31 +7,98 @@
 # @example
 #   include profile::security::cis
 class profile::security::cis (
-  $enable_1_1_1_1 = false,
-  $enable_1_1_1_2 = false,
-  $enable_1_1_1_3 = false,
-  $enable_1_1_1_4 = false,
-  $enable_1_1_1_5 = false,
-  $enable_1_1_1_6 = false,
-  $enable_1_1_1_7 = false,
-  $enable_1_1_1_8 = false,
-  $enable_1_5_1 = false,
-  $enable_1_5_3 = false,
-  $enable_1_5_4 = false,
-  $enable_1_7_1_1 = false,
-  $enable_1_7_1_2 = false,
-  $enable_1_7_1_3 = false,
-  $enable_1_7_1_4 = false,
-  $enable_1_7_1_5 = false,
-  $enable_1_7_1_6 = false,
-  $enable_5_2_x = false,
   $enable_all = false,
+  $enable_1_1_1_1 = $enable_all,
+  $enable_1_1_1_2 = $enable_all,
+  $enable_1_1_1_3 = $enable_all,
+  $enable_1_1_1_4 = $enable_all,
+  $enable_1_1_1_5 = $enable_all,
+  $enable_1_1_1_6 = $enable_all,
+  $enable_1_1_1_7 = $enable_all,
+  $enable_1_1_1_8 = $enable_all,
+  $enable_1_5_1 = $enable_all,
+  $enable_1_5_3 = $enable_all,
+  $enable_1_5_4 = $enable_all,
+  $enable_1_7_1_1 = $enable_all,
+  $enable_1_7_1_2 = $enable_all,
+  $enable_1_7_1_3 = $enable_all,
+  $enable_1_7_1_4 = $enable_all,
+  $enable_1_7_1_5 = $enable_all,
+  $enable_1_7_1_6 = $enable_all,
+  $enable_5_2_x = $enable_all,
 ) {
-  include demo_cis
+  class { 'demo_cis::controls::redhat::seven::cis_helpers':
+  }
 
-  if $enable_5_2_x == true {
-    class {'demo_cis::controls::redhat::seven::cis_5_2':
-      enable => true
-    }
+  class {'demo_cis::controls::redhat::seven::cis_1_1_1_1':
+    enable => $enable_1_1_1_1,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_1_1_2':
+    enable => $enable_1_1_1_2,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_1_1_3':
+    enable => $enable_1_1_1_3,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_1_1_4':
+    enable => $enable_1_1_1_4,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_1_1_5':
+    enable => $enable_1_1_1_5,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_1_1_6':
+    enable => $enable_1_1_1_6,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_1_1_7':
+    enable => $enable_1_1_1_7,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_1_1_8':
+    enable => $enable_1_1_1_8,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_5_1':
+    enable => $enable_1_5_1,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_5_3':
+    enable => $enable_1_5_3,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_5_4':
+    enable => $enable_1_5_4,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_7_1_1':
+    enable => $enable_1_7_1_1,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_7_1_2':
+    enable => $enable_1_7_1_2,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_7_1_3':
+    enable => $enable_1_7_1_3,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_7_1_4':
+    enable => $enable_1_7_1_4,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_7_1_5':
+    enable => $enable_1_7_1_5,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_1_7_1_6':
+    enable => $enable_1_7_1_6,
+  }
+  
+  class {'demo_cis::controls::redhat::seven::cis_5_2':
+    enable => $enable_5_2,
   }
 }

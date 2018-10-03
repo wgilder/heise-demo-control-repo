@@ -10,7 +10,13 @@ mod 'puppetlabs-registry', '2.0.2'
 mod 'puppetlabs-motd', '2.1.1'
 mod 'ghoneycutt-hosts', '2.6.0'
 mod 'puppetlabs-ntp', '7.3.0'
+mod 'puppetlabs-apache', '3.4.0'
+mod 'puppetlabs-apt', '6.1.1'
+mod 'puppetlabs-postgresql', '5.10.0'
 
 mod 'demo_cis',
   :git => 'git@github.com:wgilder/ipcrm-demo_cis.git',
   :ref => '045690d1f3cd984d319d97c46ab196f91074a450'
+
+mod 'tse-tse_facts',
+  :git => 'https://github.com/puppetlabs/tse-module-tse_facts.git'

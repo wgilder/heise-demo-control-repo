@@ -30,6 +30,10 @@ class profile::security::cis (
   class { 'demo_cis::controls::redhat::seven::cis_helpers':
   }
 
+  notify { 'CIS changes activated':
+    message => "1_1_1_1: $enable_1_1_1_1\n1_1_1_2: $enable_1_1_1_2\n1_1_1_3: $enable_1_1_1_3\n1_1_1_4: $enable_1_1_1_4\n1_1_1_5: $enable_1_1_1_5\n1_1_1_6: $enable_1_1_1_6\n1_1_1_7: $enable_1_1_1_7\n1_1_1_8: $enable_1_1_1_8\n1_5_1: $enable_1_5_1\n1_5_3: $enable_1_5_3\n1_5_4: $enable_1_5_4\n1_7_1_1: $enable_1_7_1_1\n1_7_1_2: $enable_1_7_1_2\n1_7_1_3: $enable_1_7_1_3\n1_7_1_4: $enable_1_7_1_4\n1_7_1_5: $enable_1_7_1_5\n1_7_1_6: $enable_1_7_1_6\n5_2: $enable_5_2",
+  }
+
   class {'demo_cis::controls::redhat::seven::cis_1_1_1_1':
     enable => $enable_1_1_1_1,
   }

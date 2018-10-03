@@ -1,4 +1,4 @@
-# first
+# This is a test
 
 mod "puppetlabs/stdlib", '5.1.0'
 mod 'puppetlabs/concat', '5.0.0'

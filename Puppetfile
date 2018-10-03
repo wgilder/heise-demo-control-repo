@@ -8,4 +8,4 @@ mod 'puppetlabs-firewall', '1.14.0'
 
 mod 'demo_cis',
   :git => 'git@github.com:wgilder/ipcrm-demo_cis.git',
-  :ref => '4e6b63b577b9beae5a3cea88237faf11cb5990a0'
+  :ref => '045690d1f3cd984d319d97c46ab196f91074a450'
